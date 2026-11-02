@@ -1,5 +1,7 @@
 # Environmental Monitoring and Data Analysis
 
+## ADD A LINE
+
 Course material for the Master's course *Environmental Monitoring and Data Analysis*
 (1st semester, environmental science), Chair of Sensor-based Geoinformatics,
 University of Freiburg. Lab website: <https://uni-freiburg.de/enr-geosense>
