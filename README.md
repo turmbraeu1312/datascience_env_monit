@@ -2,6 +2,8 @@
 
 ## ADD A LINE
 
+## Kornelius Müller - 02.11.26
+
 Course material for the Master's course *Environmental Monitoring and Data Analysis*
 (1st semester, environmental science), Chair of Sensor-based Geoinformatics,
 University of Freiburg. Lab website: <https://uni-freiburg.de/enr-geosense>
