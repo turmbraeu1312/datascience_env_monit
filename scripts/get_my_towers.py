@@ -28,7 +28,7 @@ import zipfile
 from pathlib import Path
 
 SHUTTLE_SOURCE = "git+https://github.com/fluxnet/shuttle.git"
-DEFAULT_CSV = "tower_sets_block4.csv"
+DEFAULT_CSV = "/home/pat/Schreibtisch/Dokumente/Uni Freiburg/WS 26 27/GitRep/datascience_env_monit/data/tower_sets_block4.csv"
 SNAP_DIR = Path("data/snapshots")
 RAW_DIR = Path("data/raw")
 
