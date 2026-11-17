@@ -1,0 +1,11 @@
+---
+title: "Data summary of my five flux towers"
+author: "Kornelius Müller"
+date: 17.11.26
+format:
+  html:
+    toc: true
+    embed-resources: true
+execute:
+  warning: false
+---
