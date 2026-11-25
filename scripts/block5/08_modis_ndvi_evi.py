@@ -25,7 +25,7 @@ Output:   data/external/modis/<SITE>_mod13q1_pixels.csv  (every pixel, every dat
 Cite:     Didan (2021) MOD13Q1 V061, NASA LP DAAC, doi:10.5067/MODIS/MOD13Q1.061
           + ORNL DAAC (2018) MODIS Land Product Subsets Web Service, doi:10.3334/ORNLDAAC/1557
 
-Run: python3 scripts/block5/08_modis_ndvi_evi.py --student 07
+Run: python3 scripts/block5/08_modis_ndvi_evi.py --student 19
 """
 import sys
 import time

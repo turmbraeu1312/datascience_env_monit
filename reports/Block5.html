@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Block 5 report</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="Block5_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Block5_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Block5_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Block5_files/libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="Block5_files/libs/quarto-html/popper.min.js"></script>
+<script src="Block5_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Block5_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Block5_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Block5_files/libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Block5_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Block5_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Block5_files/libs/bootstrap/bootstrap-c4dafe97b18c5f3510312fe03dff98dc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Block 5 report</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Author:</strong> Kornelius Müller<br>
+<strong>Date:</strong> 25 November 2026</p>
+<section id="block-5-are-my-tower-years-normal-or-not" class="level1">
+<h1>Block 5: Are my tower years normal or not?</h1>
+<section id="e1.-question-and-hypothesis" class="level2">
+<h2 class="anchored" data-anchor-id="e1.-question-and-hypothesis">E1. Question and hypothesis</h2>
+<p><strong>Question.</strong> How far is each tower year’s mean temperature and precipitation from the WorldClim 1970–2000 normal (BIO1, BIO12)?</p>
+<p><strong>Datasets.</strong> FLUXNET daily meteorology, WorldClim 2.1 (02), and PlantTraits (05). PlantTraits describes the vegetation at each tower; it is context for comparing sites, not a predictor in the climate-anomaly calculation.</p>
+<p><strong>Hypothesis.</strong> I expect the mean temperature in most observed tower-years to be above the WorldClim normal because most observations are from after the 1970–2000 baseline. I do not expect precipitation anomalies to have one consistent direction across all sites and years.</p>
+<p><strong>Scope.</strong> Five towers assigned to student 19. Annual values are descriptive: years within one site are not independent, and five sites are not enough for broad ecological generalization.</p>
+</section>
+<section id="e2.-data" class="level2">
+<h2 class="anchored" data-anchor-id="e2.-data">E2. Data</h2>
+<p>This notebook follows <a href="../assignments/block-5-complementary-data.md">Part E of the Block 5 assignment</a>. Keep the assignment open for the report requirements and hand-in checklist.</p>
+<p>Run this notebook from the project root or its <code>reports/</code> folder. Install <code>pandas</code> and <code>matplotlib</code> if needed (<code>python -m pip install pandas matplotlib</code>). The Block 5 scripts create the WorldClim and PlantTraits CSVs used below. The Block 4 FLUXNET daily ZIPs are in <code>scripts/data/raw/</code> in this project.</p>
+<p>The original FLUXNET download date was not recorded in the supplied archive metadata. WorldClim and PlantTraits were extracted on 2026-11-25. The first PlantTraits HTTP request returned 504; rerunning the supplied script succeeded.</p>
+<div id="imports-and-paths" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-25T13:18:40.168920Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-25T13:18:40.168228Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-25T13:18:41.196539Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-25T13:18:41.195930Z&quot;}}" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> zipfile</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>STUDENT_NO <span class="op">=</span> <span class="st">"19"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>MIN_COVERAGE <span class="op">=</span> <span class="fl">0.90</span>  <span class="co"># require 90% of a year's daily observations</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ROOT <span class="op">=</span> <span class="bu">next</span>(</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    (candidate <span class="cf">for</span> candidate <span class="kw">in</span> (Path.cwd(), <span class="op">*</span>Path.cwd().parents)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>     <span class="cf">if</span> (candidate <span class="op">/</span> <span class="st">"tower_sets_block4.csv"</span>).exists()),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    Path.cwd(),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>TOWER_FILE <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">"tower_sets_block4.csv"</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>RAW_DIR <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">"scripts"</span> <span class="op">/</span> <span class="st">"data"</span> <span class="op">/</span> <span class="st">"raw"</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>WORLDCLIM_DIR <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">"data"</span> <span class="op">/</span> <span class="st">"external"</span> <span class="op">/</span> <span class="st">"worldclim"</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>PLANTTRAITS_DIR <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">"data"</span> <span class="op">/</span> <span class="st">"external"</span> <span class="op">/</span> <span class="st">"planttraits"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>DOWNLOAD_DATES <span class="op">=</span> {</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FLUXNET"</span>: <span class="st">"date not recorded; ZIPs supplied in scripts/data/raw/"</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"WorldClim 2.1"</span>: <span class="st">"2026-11-25"</span>,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PlantTraits"</span>: <span class="st">"2026-11-25"</span>,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> TOWER_FILE.exists():</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f"</span><span class="sc">{</span>TOWER_FILE<span class="sc">}</span><span class="ss"> not found. Run the notebook from the project root."</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>tower_table <span class="op">=</span> pd.read_csv(TOWER_FILE, dtype<span class="op">=</span>{<span class="st">"student_no"</span>: <span class="bu">str</span>, <span class="st">"site_id"</span>: <span class="bu">str</span>})</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>student_key <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span><span class="bu">int</span>(STUDENT_NO)<span class="sc">:02d}</span><span class="ss">"</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>sites <span class="op">=</span> tower_table.loc[</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    tower_table[<span class="st">"student_no"</span>].<span class="bu">str</span>.zfill(<span class="dv">2</span>).eq(student_key)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>].drop_duplicates(<span class="st">"site_id"</span>).copy()</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> sites.empty:</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"No tower sites found for student </span><span class="sc">{</span>student_key<span class="sc">}</span><span class="ss"> in </span><span class="sc">{</span>TOWER_FILE<span class="sc">.</span>name<span class="sc">}</span><span class="ss">."</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>site_ids <span class="op">=</span> sites[<span class="st">"site_id"</span>].tolist()</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Student </span><span class="sc">{</span>student_key<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="bu">len</span>(site_ids)<span class="sc">}</span><span class="ss"> sites — </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(site_ids)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>PLANTTRAITS_FILE <span class="op">=</span> PLANTTRAITS_DIR <span class="op">/</span> <span class="st">"planttraits_my_sites.csv"</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> PLANTTRAITS_FILE.exists():</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f"Required PlantTraits output not found: </span><span class="sc">{</span>PLANTTRAITS_FILE<span class="sc">}</span><span class="ss">. Run scripts/block5/05_planttraits.py."</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>planttraits <span class="op">=</span> pd.read_csv(PLANTTRAITS_FILE)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Student 19: 5 sites — DE-Hai, RU-Fyo, US-UiD, FR-Gri, CN-Sdq</code></pre>
+</div>
+</div>
+<section id="planttraits-at-my-five-towers" class="level3">
+<h3 class="anchored" data-anchor-id="planttraits-at-my-five-towers">PlantTraits at my five towers</h3>
+<p>PlantTraits is the second selected dataset. These one-cell trait estimates describe differences among tower surroundings; they are not used to calculate the climate anomalies. A 1 km trait pixel is still larger than the typical flux footprint (about 100 m–1 km), and the WorldClim 5′ pixel (~9 km) is much larger. The spatial mismatch means neither sampled cell represents exactly the changing area contributing to every tower measurement. Inspect the <code>_aoa</code> area-of-applicability diagnostics below before interpreting the trait values; they are model estimates, not site measurements.</p>
+<div id="trait-table" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-25T13:18:41.198494Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-25T13:18:41.198230Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-25T13:18:41.238142Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-25T13:18:41.236664Z&quot;}}" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>trait_columns <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SLA"</span>: <span class="st">"SLA (m² kg⁻¹)"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"leaf_N_mass"</span>: <span class="st">"Leaf N (mg g⁻¹)"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"stem_density"</span>: <span class="st">"Stem density (g cm⁻³)"</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rooting_depth"</span>: <span class="st">"Rooting depth (m)"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>available_traits <span class="op">=</span> [column <span class="cf">for</span> column <span class="kw">in</span> trait_columns <span class="cf">if</span> column <span class="kw">in</span> planttraits.columns]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> available_traits:</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"No expected PlantTraits columns found; inspect planttraits_my_sites.csv."</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>trait_table <span class="op">=</span> (</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    sites[[<span class="st">"site_id"</span>, <span class="st">"site_name"</span>, <span class="st">"igbp"</span>]]</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    .merge(planttraits[[<span class="st">"site_id"</span>, <span class="op">*</span>available_traits]], on<span class="op">=</span><span class="st">"site_id"</span>, how<span class="op">=</span><span class="st">"left"</span>, validate<span class="op">=</span><span class="st">"one_to_one"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    .rename(columns<span class="op">=</span>{column: trait_columns[column] <span class="cf">for</span> column <span class="kw">in</span> available_traits})</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>display(trait_table)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>aoa_columns <span class="op">=</span> [<span class="ss">f"</span><span class="sc">{</span>column<span class="sc">}</span><span class="ss">_aoa"</span> <span class="cf">for</span> column <span class="kw">in</span> available_traits <span class="cf">if</span> <span class="ss">f"</span><span class="sc">{</span>column<span class="sc">}</span><span class="ss">_aoa"</span> <span class="kw">in</span> planttraits.columns]</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> aoa_columns:</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"PlantTraits area-of-applicability diagnostics (inspect before interpreting predictions):"</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    display(planttraits[[<span class="st">"site_id"</span>, <span class="op">*</span>aoa_columns]].loc[planttraits[<span class="st">"site_id"</span>].isin(site_ids)])</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Dataset provenance / download dates:"</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>provenance <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    [</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        [<span class="st">"FLUXNET"</span>, <span class="st">"TA_F, P_F, P_F_QC"</span>, <span class="st">"tower-specific; daily"</span>, DOWNLOAD_DATES[<span class="st">"FLUXNET"</span>], <span class="st">"FLUXNET ZIP / FLUXMET_DD; no changes"</span>, <span class="st">"Five site citations below; Pastorello et al. (2020)"</span>],</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>        [<span class="st">"WorldClim 2.1"</span>, <span class="st">"BIO1, BIO12"</span>, <span class="st">"5′ (~9 km); 1970–2000 normal"</span>, DOWNLOAD_DATES[<span class="st">"WorldClim 2.1"</span>], <span class="st">"scripts/block5/02_worldclim.py; RES=5m; no changes"</span>, <span class="st">"Fick &amp; Hijmans (2017); doi:10.1002/joc.5086"</span>],</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        [<span class="st">"PlantTraits"</span>, <span class="st">", "</span>.join(available_traits), <span class="st">"~1 km; static map"</span>, DOWNLOAD_DATES[<span class="st">"PlantTraits"</span>], <span class="st">"scripts/block5/05_planttraits.py; no changes; first request returned HTTP 504, retry succeeded"</span>, <span class="st">"Lusk et al. (2026); doi:10.1038/s41467-026-68996-y; data doi:10.5281/zenodo.14646322"</span>],</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>[<span class="st">"Dataset"</span>, <span class="st">"Variables"</span>, <span class="st">"Resolution / period"</span>, <span class="st">"Downloaded on"</span>, <span class="st">"Script / processing"</span>, <span class="st">"Citation"</span>],</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>display(provenance)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">site_id</th>
+<th data-quarto-table-cell-role="th">site_name</th>
+<th data-quarto-table-cell-role="th">igbp</th>
+<th data-quarto-table-cell-role="th">SLA (m² kg⁻¹)</th>
+<th data-quarto-table-cell-role="th">Leaf N (mg g⁻¹)</th>
+<th data-quarto-table-cell-role="th">Stem density (g cm⁻³)</th>
+<th data-quarto-table-cell-role="th">Rooting depth (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>DE-Hai</td>
+<td>Hainich</td>
+<td>DBF</td>
+<td>24.187972</td>
+<td>24.485297</td>
+<td>0.433393</td>
+<td>0.374899</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>RU-Fyo</td>
+<td>Fyodorovskoye</td>
+<td>ENF</td>
+<td>13.983079</td>
+<td>19.817654</td>
+<td>0.421109</td>
+<td>0.465452</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>US-UiD</td>
+<td>University of Illinois Restored Native Prairie</td>
+<td>GRA</td>
+<td>19.944934</td>
+<td>21.525396</td>
+<td>0.408856</td>
+<td>0.476771</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>FR-Gri</td>
+<td>Grignon</td>
+<td>CRO</td>
+<td>20.473941</td>
+<td>24.316870</td>
+<td>0.352790</td>
+<td>0.431495</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>CN-Sdq</td>
+<td>Sidaoqiao</td>
+<td>OSH</td>
+<td>11.167810</td>
+<td>21.978907</td>
+<td>0.546123</td>
+<td>1.744514</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>PlantTraits area-of-applicability diagnostics (inspect before interpreting predictions):</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">site_id</th>
+<th data-quarto-table-cell-role="th">SLA_aoa</th>
+<th data-quarto-table-cell-role="th">leaf_N_mass_aoa</th>
+<th data-quarto-table-cell-role="th">stem_density_aoa</th>
+<th data-quarto-table-cell-role="th">rooting_depth_aoa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>DE-Hai</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>RU-Fyo</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>US-UiD</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>FR-Gri</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>CN-Sdq</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Dataset provenance / download dates:</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Dataset</th>
+<th data-quarto-table-cell-role="th">Variables</th>
+<th data-quarto-table-cell-role="th">Resolution / period</th>
+<th data-quarto-table-cell-role="th">Downloaded on</th>
+<th data-quarto-table-cell-role="th">Script / processing</th>
+<th data-quarto-table-cell-role="th">Citation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>FLUXNET</td>
+<td>TA_F, P_F, P_F_QC</td>
+<td>tower-specific; daily</td>
+<td>date not recorded; ZIPs supplied in scripts/da...</td>
+<td>FLUXNET ZIP / FLUXMET_DD; no changes</td>
+<td>Five site citations below; Pastorello et al. (...</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>WorldClim 2.1</td>
+<td>BIO1, BIO12</td>
+<td>5′ (~9 km); 1970–2000 normal</td>
+<td>2026-11-25</td>
+<td>scripts/block5/02_worldclim.py; RES=5m; no cha...</td>
+<td>Fick &amp; Hijmans (2017); doi:10.1002/joc.5086</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>PlantTraits</td>
+<td>SLA, leaf_N_mass, stem_density, rooting_depth</td>
+<td>~1 km; static map</td>
+<td>2026-11-25</td>
+<td>scripts/block5/05_planttraits.py; no changes; ...</td>
+<td>Lusk et al. (2026); doi:10.1038/s41467-026-689...</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>Table 1.</strong> Nearest-cell PlantTraits estimates for the five towers. Traits are community-weighted map predictions, not direct tower-footprint measurements; all sampled <code>_aoa</code> diagnostics are 0 and warrant caution.</p>
+</section>
+<section id="provenance" class="level3">
+<h3 class="anchored" data-anchor-id="provenance">Provenance</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dataset</th>
+<th>Variables used</th>
+<th>Resolution and period</th>
+<th>Extraction / processing</th>
+<th>Citation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FLUXNET</td>
+<td><code>TA_F</code> (daily mean air temperature, °C); <code>P_F</code> (daily precipitation, mm day⁻¹); <code>P_F_QC</code> (precipitation quality fraction)</td>
+<td>Daily: DE-Hai 2000–2025; RU-Fyo 1998–2025; US-UiD 2008–2024; FR-Gri 2004–2026; CN-Sdq 2013–2024</td>
+<td><code>FLUXMET_DD</code> files in each tower ZIP; annual mean <code>TA_F</code>, annual sum <code>P_F</code>, and annual mean <code>P_F_QC</code></td>
+<td>Site citations and acknowledgements in E6; Pastorello et al.&nbsp;(2020), <em>Scientific Data</em> 7, 225, doi:10.1038/s41597-020-0534-3.</td>
+</tr>
+<tr class="even">
+<td>WorldClim 2.1</td>
+<td>BIO1 (annual mean temperature, °C); BIO12 (annual precipitation, mm)</td>
+<td>5 arc-minutes (~9 km); 1970–2000 normal</td>
+<td>Nearest raster cell sampled at each tower coordinate (EPSG:4326) by <code>scripts/block5/02_worldclim.py</code></td>
+<td>Fick &amp; Hijmans (2017), <em>International Journal of Climatology</em> 37, 4302–4315, doi:10.1002/joc.5086.</td>
+</tr>
+<tr class="odd">
+<td>PlantTraits</td>
+<td>SLA (m² kg⁻¹), leaf N (mg g⁻¹), stem density (g cm⁻³), rooting depth (m)</td>
+<td>~1 km trait maps; spatial summary, no time series</td>
+<td>Nearest map cell sampled at each tower; values describe the local plant community</td>
+<td>Lusk et al.&nbsp;(2026), <em>Nature Communications</em> 17, 1203, doi:10.1038/s41467-026-68996-y; data doi:10.5281/zenodo.14646322.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="e3.-methods" class="level2">
+<h2 class="anchored" data-anchor-id="e3.-methods">E3. Methods</h2>
+<ul>
+<li><strong>Download and extraction:</strong> WorldClim 2.1 was sampled by <code>scripts/block5/02_worldclim.py</code> at 5 arc-minutes using the nearest raster cell at each tower’s longitude/latitude (EPSG:4326). PlantTraits values were extracted by <code>scripts/block5/05_planttraits.py</code>; the script transforms tower coordinates from EPSG:4326 to the map CRS before sampling. The FLUXNET <code>FLUXMET_DD</code> CSV was read from each tower’s ZIP in <code>scripts/data/raw/</code>. WorldClim used the script default <code>RES = "5m"</code>; PlantTraits used the seven default trait layers. Neither download script was modified. The first PlantTraits request returned HTTP 504; a later run of the same script succeeded.</li>
+<li><strong>Processing:</strong> <code>-9999</code> is treated as missing. WorldClim BIO1 is already in °C and BIO12 in mm, so no additional scaling is applied. For each site and calendar year, the notebook calculates mean daily <code>TA_F</code> and sums daily <code>P_F</code>. Temperature years need at least 90% daily coverage. Precipitation totals are not rescaled: a year must contain a valid <code>P_F</code> value for every calendar day.</li>
+<li><strong>Quality and analysis:</strong> the annual mean <code>P_F_QC</code> must be at least 0.5 for precipitation to be included, meaning at least half the daily values are marked measured or good-quality gap-filled on average. CN-Sdq and US-UiD are excluded because their precipitation QC is zero throughout. Each annual value is joined to its site’s WorldClim BIO1/BIO12 normal, then the notebook calculates temperature and precipitation departures. It reports per-site and overall means, with <code>n</code> equal to qualifying tower-years. PlantTraits is summarized per tower as context and is not included in the anomaly calculation.</li>
+</ul>
+<p>The FLUXNET <code>P_F_QC</code> metadata defines a 0–1 fraction of measured and good-quality gap-filled precipitation. The 0.5 cutoff is an explicit majority-quality rule for this descriptive comparison, not a significance threshold. The original FLUXNET acquisition date is unavailable in the supplied archive metadata.</p>
+<div id="load-and-process-data" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-25T13:18:41.242368Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-25T13:18:41.241905Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-25T13:18:42.447698Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-25T13:18:42.447123Z&quot;}}" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> require_file(path):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> path.exists():</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Required input not found: </span><span class="sc">{</span>path<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Run the matching Block 5 download script and place the Block 4 FLUXNET ZIPs in scripts/data/raw/."</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> path</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>worldclim <span class="op">=</span> pd.read_csv(require_file(WORLDCLIM_DIR <span class="op">/</span> <span class="st">"worldclim_bio_my_sites.csv"</span>))</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>planttraits <span class="op">=</span> pd.read_csv(require_file(PLANTTRAITS_DIR <span class="op">/</span> <span class="st">"planttraits_my_sites.csv"</span>))</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> label, frame <span class="kw">in</span> ((<span class="st">"WorldClim"</span>, worldclim), (<span class="st">"PlantTraits"</span>, planttraits)):</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> frame[<span class="st">"site_id"</span>].duplicated().<span class="bu">any</span>():</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"</span><span class="sc">{</span>label<span class="sc">}</span><span class="ss"> input has more than one row per site_id."</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    missing_sites <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">set</span>(site_ids) <span class="op">-</span> <span class="bu">set</span>(frame[<span class="st">"site_id"</span>]))</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> missing_sites:</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"</span><span class="sc">{</span>label<span class="sc">}</span><span class="ss"> input is missing tower(s): </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(missing_sites)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>normals <span class="op">=</span> worldclim.loc[worldclim[<span class="st">"site_id"</span>].isin(site_ids), [<span class="st">"site_id"</span>, <span class="st">"BIO1"</span>, <span class="st">"BIO12"</span>]].copy()</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>normals[<span class="st">"BIO1_C"</span>] <span class="op">=</span> pd.to_numeric(normals[<span class="st">"BIO1"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>normals[<span class="st">"BIO12_mm"</span>] <span class="op">=</span> pd.to_numeric(normals[<span class="st">"BIO12"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> normals[[<span class="st">"BIO1_C"</span>, <span class="st">"BIO12_mm"</span>]].isna().<span class="bu">any</span>().<span class="bu">any</span>():</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"WorldClim BIO1 or BIO12 is missing for at least one tower."</span>)</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the daily FLUXMET_DD file from each tower's Block 4 ZIP.</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>zip_files <span class="op">=</span> <span class="bu">sorted</span>(RAW_DIR.glob(<span class="st">"*.zip"</span>)) <span class="cf">if</span> RAW_DIR.exists() <span class="cf">else</span> []</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> zip_files:</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f"No FLUXNET ZIP files found in </span><span class="sc">{</span>RAW_DIR<span class="sc">}</span><span class="ss">."</span>)</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>flux_parts <span class="op">=</span> []</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>found_sites <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> zip_path <span class="kw">in</span> zip_files:</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    match <span class="op">=</span> re.search(<span class="vs">r"</span><span class="kw">(</span><span class="pp">[A-Z]</span><span class="op">{2}</span><span class="vs">-</span><span class="pp">[A-Za-z0-9]</span><span class="op">{3}</span><span class="kw">)</span><span class="vs">"</span>, zip_path.name)</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> match <span class="kw">or</span> match.group(<span class="dv">1</span>) <span class="kw">not</span> <span class="kw">in</span> site_ids:</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    site_id <span class="op">=</span> match.group(<span class="dv">1</span>)</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> zipfile.ZipFile(zip_path) <span class="im">as</span> archive:</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>        daily_files <span class="op">=</span> <span class="bu">sorted</span>(name <span class="cf">for</span> name <span class="kw">in</span> archive.namelist() <span class="cf">if</span> <span class="st">"FLUXMET_DD"</span> <span class="kw">in</span> name)</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> daily_files:</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"No FLUXMET_DD file found inside </span><span class="sc">{</span>zip_path<span class="sc">.</span>name<span class="sc">}</span><span class="ss">."</span>)</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> archive.<span class="bu">open</span>(daily_files[<span class="dv">0</span>]) <span class="im">as</span> stream:</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>            frame <span class="op">=</span> pd.read_csv(</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>                stream,</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>                usecols<span class="op">=</span><span class="kw">lambda</span> col: col <span class="kw">in</span> {<span class="st">"TIMESTAMP"</span>, <span class="st">"TA_F"</span>, <span class="st">"P_F"</span>, <span class="st">"P_F_QC"</span>},</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>                dtype<span class="op">=</span>{<span class="st">"TIMESTAMP"</span>: <span class="bu">str</span>},</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>                na_values<span class="op">=</span>[<span class="op">-</span><span class="dv">9999</span>],</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>    required_columns <span class="op">=</span> {<span class="st">"TIMESTAMP"</span>, <span class="st">"TA_F"</span>, <span class="st">"P_F"</span>, <span class="st">"P_F_QC"</span>}</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> required_columns.issubset(frame.columns):</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"</span><span class="sc">{</span>daily_files[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> does not contain all required columns: </span><span class="sc">{</span>required_columns<span class="sc">}</span><span class="ss">."</span>)</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>    frame[<span class="st">"date"</span>] <span class="op">=</span> pd.to_datetime(frame.pop(<span class="st">"TIMESTAMP"</span>), <span class="bu">format</span><span class="op">=</span><span class="st">"%Y%m</span><span class="sc">%d</span><span class="st">"</span>, errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> frame[<span class="st">"date"</span>].isna().<span class="bu">any</span>():</span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Invalid daily timestamps in </span><span class="sc">{</span>daily_files[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">."</span>)</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> column <span class="kw">in</span> (<span class="st">"TA_F"</span>, <span class="st">"P_F"</span>, <span class="st">"P_F_QC"</span>):</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>        frame[column] <span class="op">=</span> pd.to_numeric(frame[column], errors<span class="op">=</span><span class="st">"coerce"</span>).replace(<span class="op">-</span><span class="dv">9999</span>, np.nan)</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>    frame[<span class="st">"site_id"</span>] <span class="op">=</span> site_id</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>    flux_parts.append(frame[[<span class="st">"site_id"</span>, <span class="st">"date"</span>, <span class="st">"TA_F"</span>, <span class="st">"P_F"</span>, <span class="st">"P_F_QC"</span>]])</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>    found_sites.add(site_id)</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>missing_flux <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">set</span>(site_ids) <span class="op">-</span> found_sites)</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> missing_flux:</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f"No daily FLUXMET_DD ZIP found for tower(s): </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(missing_flux)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>flux <span class="op">=</span> pd.concat(flux_parts, ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> flux.duplicated([<span class="st">"site_id"</span>, <span class="st">"date"</span>]).<span class="bu">any</span>():</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Duplicate site-day rows found in the FLUXNET daily files."</span>)</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>flux[<span class="st">"year"</span>] <span class="op">=</span> flux[<span class="st">"date"</span>].dt.year</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>annual <span class="op">=</span> (</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>    flux.groupby([<span class="st">"site_id"</span>, <span class="st">"year"</span>], as_index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>    .agg(</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>        temp_mean_C<span class="op">=</span>(<span class="st">"TA_F"</span>, <span class="st">"mean"</span>),</span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>        temp_days<span class="op">=</span>(<span class="st">"TA_F"</span>, <span class="st">"count"</span>),</span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>        precip_sum_mm<span class="op">=</span>(<span class="st">"P_F"</span>, <span class="st">"sum"</span>),</span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>        precip_days<span class="op">=</span>(<span class="st">"P_F"</span>, <span class="st">"count"</span>),</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>        precip_qc_mean<span class="op">=</span>(<span class="st">"P_F_QC"</span>, <span class="st">"mean"</span>),</span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>        calendar_days<span class="op">=</span>(<span class="st">"date"</span>, <span class="st">"nunique"</span>),</span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>annual[<span class="st">"days_in_year"</span>] <span class="op">=</span> pd.to_datetime(annual[<span class="st">"year"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"-01-01"</span>).dt.is_leap_year.<span class="bu">map</span>(</span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>    {<span class="va">True</span>: <span class="dv">366</span>, <span class="va">False</span>: <span class="dv">365</span>}</span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>annual[<span class="st">"temp_coverage"</span>] <span class="op">=</span> annual[<span class="st">"temp_days"</span>] <span class="op">/</span> annual[<span class="st">"days_in_year"</span>]</span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>annual[<span class="st">"precip_coverage"</span>] <span class="op">=</span> annual[<span class="st">"precip_days"</span>] <span class="op">/</span> annual[<span class="st">"days_in_year"</span>]</span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>annual.loc[annual[<span class="st">"temp_coverage"</span>] <span class="op">&lt;</span> MIN_COVERAGE, <span class="st">"temp_mean_C"</span>] <span class="op">=</span> np.nan</span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>annual[<span class="st">"precip_valid"</span>] <span class="op">=</span> (</span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>    (annual[<span class="st">"precip_days"</span>] <span class="op">==</span> annual[<span class="st">"days_in_year"</span>])</span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (annual[<span class="st">"calendar_days"</span>] <span class="op">==</span> annual[<span class="st">"days_in_year"</span>])</span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (annual[<span class="st">"precip_qc_mean"</span>] <span class="op">&gt;=</span> <span class="fl">0.5</span>)</span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>annual.loc[<span class="op">~</span>annual[<span class="st">"precip_valid"</span>], <span class="st">"precip_sum_mm"</span>] <span class="op">=</span> np.nan</span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> annual.merge(normals[[<span class="st">"site_id"</span>, <span class="st">"BIO1_C"</span>, <span class="st">"BIO12_mm"</span>]], on<span class="op">=</span><span class="st">"site_id"</span>, how<span class="op">=</span><span class="st">"left"</span>, validate<span class="op">=</span><span class="st">"many_to_one"</span>)</span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>results[<span class="st">"temp_anomaly_C"</span>] <span class="op">=</span> results[<span class="st">"temp_mean_C"</span>] <span class="op">-</span> results[<span class="st">"BIO1_C"</span>]</span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>results[<span class="st">"precip_anomaly_mm"</span>] <span class="op">=</span> results[<span class="st">"precip_sum_mm"</span>] <span class="op">-</span> results[<span class="st">"BIO12_mm"</span>]</span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>results[<span class="st">"precip_anomaly_pct"</span>] <span class="op">=</span> <span class="dv">100</span> <span class="op">*</span> results[<span class="st">"precip_anomaly_mm"</span>] <span class="op">/</span> results[<span class="st">"BIO12_mm"</span>].where(results[<span class="st">"BIO12_mm"</span>] <span class="op">!=</span> <span class="dv">0</span>)</span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Complete input: </span><span class="sc">{</span><span class="bu">len</span>(site_ids)<span class="sc">}</span><span class="ss"> towers; </span><span class="sc">{</span>results[<span class="st">'year'</span>]<span class="sc">.</span>nunique()<span class="sc">}</span><span class="ss"> observed years in the annual table."</span>)</span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a>display(results[[<span class="st">"site_id"</span>, <span class="st">"year"</span>, <span class="st">"temp_mean_C"</span>, <span class="st">"BIO1_C"</span>, <span class="st">"temp_anomaly_C"</span>, <span class="st">"precip_sum_mm"</span>, <span class="st">"BIO12_mm"</span>, <span class="st">"precip_anomaly_mm"</span>, <span class="st">"temp_coverage"</span>, <span class="st">"precip_coverage"</span>, <span class="st">"precip_qc_mean"</span>, <span class="st">"precip_valid"</span>]].head(<span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Complete input: 5 towers; 29 observed years in the annual table.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">site_id</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">temp_mean_C</th>
+<th data-quarto-table-cell-role="th">BIO1_C</th>
+<th data-quarto-table-cell-role="th">temp_anomaly_C</th>
+<th data-quarto-table-cell-role="th">precip_sum_mm</th>
+<th data-quarto-table-cell-role="th">BIO12_mm</th>
+<th data-quarto-table-cell-role="th">precip_anomaly_mm</th>
+<th data-quarto-table-cell-role="th">temp_coverage</th>
+<th data-quarto-table-cell-role="th">precip_coverage</th>
+<th data-quarto-table-cell-role="th">precip_qc_mean</th>
+<th data-quarto-table-cell-role="th">precip_valid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>CN-Sdq</td>
+<td>2013</td>
+<td>11.120559</td>
+<td>8.785501</td>
+<td>2.335058</td>
+<td>NaN</td>
+<td>41.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>CN-Sdq</td>
+<td>2014</td>
+<td>10.640173</td>
+<td>8.785501</td>
+<td>1.854672</td>
+<td>NaN</td>
+<td>41.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>CN-Sdq</td>
+<td>2015</td>
+<td>10.886414</td>
+<td>8.785501</td>
+<td>2.100913</td>
+<td>NaN</td>
+<td>41.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>CN-Sdq</td>
+<td>2016</td>
+<td>10.804590</td>
+<td>8.785501</td>
+<td>2.019090</td>
+<td>NaN</td>
+<td>41.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>CN-Sdq</td>
+<td>2017</td>
+<td>11.481310</td>
+<td>8.785501</td>
+<td>2.695809</td>
+<td>NaN</td>
+<td>41.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>CN-Sdq</td>
+<td>2018</td>
+<td>10.208751</td>
+<td>8.785501</td>
+<td>1.423250</td>
+<td>NaN</td>
+<td>41.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>CN-Sdq</td>
+<td>2019</td>
+<td>10.919145</td>
+<td>8.785501</td>
+<td>2.133645</td>
+<td>NaN</td>
+<td>41.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>CN-Sdq</td>
+<td>2020</td>
+<td>10.775270</td>
+<td>8.785501</td>
+<td>1.989770</td>
+<td>NaN</td>
+<td>41.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>CN-Sdq</td>
+<td>2021</td>
+<td>11.270655</td>
+<td>8.785501</td>
+<td>2.485154</td>
+<td>NaN</td>
+<td>41.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>CN-Sdq</td>
+<td>2022</td>
+<td>11.232378</td>
+<td>8.785501</td>
+<td>2.446878</td>
+<td>NaN</td>
+<td>41.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="e4.-results" class="level2">
+<h2 class="anchored" data-anchor-id="e4.-results">E4. Results</h2>
+<p>A positive temperature anomaly means that year’s FLUXNET annual mean was warmer than the WorldClim normal. Positive precipitation anomaly means that year’s precipitation total was wetter. The lines show each tower separately; they are descriptive and do not imply a causal effect. Captions follow each figure and table.</p>
+<div id="summary-and-figure" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-25T13:18:42.450294Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-25T13:18:42.450043Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-25T13:18:42.969695Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-25T13:18:42.969067Z&quot;}}" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> (</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    results.groupby(<span class="st">"site_id"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    .agg(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        temperature_years<span class="op">=</span>(<span class="st">"temp_anomaly_C"</span>, <span class="st">"count"</span>),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        mean_temp_anomaly_C<span class="op">=</span>(<span class="st">"temp_anomaly_C"</span>, <span class="st">"mean"</span>),</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        warmer_years<span class="op">=</span>(<span class="st">"temp_anomaly_C"</span>, <span class="kw">lambda</span> values: <span class="bu">int</span>((values <span class="op">&gt;</span> <span class="dv">0</span>).<span class="bu">sum</span>())),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        precipitation_years<span class="op">=</span>(<span class="st">"precip_anomaly_mm"</span>, <span class="st">"count"</span>),</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        mean_precip_anomaly_mm<span class="op">=</span>(<span class="st">"precip_anomaly_mm"</span>, <span class="st">"mean"</span>),</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        mean_precip_anomaly_pct<span class="op">=</span>(<span class="st">"precip_anomaly_pct"</span>, <span class="st">"mean"</span>),</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Per-tower mean anomalies (n is the number of qualifying tower-years):"</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>display(summary.<span class="bu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>n_temp <span class="op">=</span> <span class="bu">int</span>(results[<span class="st">"temp_anomaly_C"</span>].count())</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>n_precip <span class="op">=</span> <span class="bu">int</span>(results[<span class="st">"precip_anomaly_mm"</span>].count())</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"Across </span><span class="sc">{</span>results[<span class="st">'site_id'</span>]<span class="sc">.</span>nunique()<span class="sc">}</span><span class="ss"> towers and </span><span class="sc">{</span>n_temp<span class="sc">}</span><span class="ss"> qualifying tower-years, "</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"the mean temperature anomaly was </span><span class="sc">{</span>results[<span class="st">'temp_anomaly_C'</span>]<span class="sc">.</span>mean()<span class="sc">:.2f}</span><span class="ss"> °C."</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"Across </span><span class="sc">{</span>n_precip<span class="sc">}</span><span class="ss"> qualifying tower-years, the mean precipitation anomaly was "</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"</span><span class="sc">{</span>results[<span class="st">'precip_anomaly_mm'</span>]<span class="sc">.</span>mean()<span class="sc">:.1f}</span><span class="ss"> mm/year "</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"(</span><span class="sc">{</span>results[<span class="st">'precip_anomaly_pct'</span>]<span class="sc">.</span>mean()<span class="sc">:.1f}</span><span class="ss">% of the WorldClim normal)."</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">11</span>, <span class="dv">8</span>), sharex<span class="op">=</span><span class="va">True</span>, constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> site_id, group <span class="kw">in</span> results.groupby(<span class="st">"site_id"</span>):</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">0</span>].plot(group[<span class="st">"year"</span>], group[<span class="st">"temp_anomaly_C"</span>], marker<span class="op">=</span><span class="st">"o"</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span>site_id)</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">1</span>].plot(group[<span class="st">"year"</span>], group[<span class="st">"precip_anomaly_mm"</span>], marker<span class="op">=</span><span class="st">"o"</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span>site_id)</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">"Annual mean temperature anomaly (°C)"</span>)</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"Tower-year climate compared with WorldClim 1970–2000 normals"</span>)</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">"Annual precipitation anomaly (mm/year)"</span>)</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend(title<span class="op">=</span><span class="st">"Tower"</span>, ncol<span class="op">=</span><span class="dv">3</span>, fontsize<span class="op">=</span><span class="st">"small"</span>)</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Per-tower mean anomalies (n is the number of qualifying tower-years):</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">site_id</th>
+<th data-quarto-table-cell-role="th">temperature_years</th>
+<th data-quarto-table-cell-role="th">mean_temp_anomaly_C</th>
+<th data-quarto-table-cell-role="th">warmer_years</th>
+<th data-quarto-table-cell-role="th">precipitation_years</th>
+<th data-quarto-table-cell-role="th">mean_precip_anomaly_mm</th>
+<th data-quarto-table-cell-role="th">mean_precip_anomaly_pct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>CN-Sdq</td>
+<td>12</td>
+<td>2.25</td>
+<td>12</td>
+<td>0</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>DE-Hai</td>
+<td>26</td>
+<td>1.01</td>
+<td>24</td>
+<td>24</td>
+<td>-70.11</td>
+<td>-8.74</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>FR-Gri</td>
+<td>22</td>
+<td>1.16</td>
+<td>20</td>
+<td>20</td>
+<td>-70.82</td>
+<td>-11.03</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>RU-Fyo</td>
+<td>28</td>
+<td>1.02</td>
+<td>25</td>
+<td>25</td>
+<td>-135.33</td>
+<td>-19.64</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>US-UiD</td>
+<td>17</td>
+<td>0.29</td>
+<td>11</td>
+<td>0</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Across 5 towers and 105 qualifying tower-years, the mean temperature anomaly was 1.07 °C.
+Across 69 qualifying tower-years, the mean precipitation anomaly was -93.9 mm/year (-13.4% of the WorldClim normal).</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Block5_files/figure-html/cell-5-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Figure 1.</strong> Annual temperature (°C) and precipitation (mm/year) departures at each tower relative to its WorldClim 1970–2000 normal. Temperature includes years with at least 90% daily coverage. Precipitation is shown only for complete calendar years with mean <code>P_F_QC</code> ≥ 0.5; CN-Sdq and US-UiD are omitted because their QC is zero throughout. Lines connect years within the same tower; observations are descriptive, not independent replicates.</p>
+</section>
+<section id="e5.-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="e5.-discussion">E5. Discussion</h2>
+<p>The temperature hypothesis is supported descriptively: mean temperature was above the WorldClim normal at all five towers, with a combined mean anomaly of +1.07 °C across 105 tower-years; 92 of those tower-years were warmer than normal. Mean site anomalies ranged from +0.29 °C at US-UiD to +2.25 °C at CN-Sdq, so the response was not identical among sites. For precipitation, I retained only complete calendar years with mean <code>P_F_QC</code> of at least 0.5; CN-Sdq and US-UiD were excluded because their precipitation QC is zero throughout. The remaining 69 tower-years averaged 93.9 mm/year below their WorldClim normal, with site means of −70.1 mm at DE-Hai, −70.8 mm at FR-Gri, and −135.3 mm at RU-Fyo; this is descriptive and not independent-site inference. WorldClim’s 5′ cells are about 9 km across and PlantTraits’ cells about 1 km, while a tower footprint is roughly 100 m–1 km, so each nearest-cell value can include areas outside the flux footprint and miss local heterogeneity. WorldClim is a 1970–2000 climatology rather than a year-specific observation, so each departure combines interannual weather with longer-term climate differences. The analysis uses only five towers, tower-years within a site are temporally dependent, and PlantTraits’ area-of-applicability values are 0 for every sampled trait/site, so those trait predictions should not be interpreted as reliable local trait measurements. The complete-year precipitation rule avoids scaling partial totals, but excludes partial years and still cannot resolve biases in the precipitation product; longer records, local precipitation measurements, and footprint-weighted gridded values would improve the comparison.</p>
+</section>
+<section id="e6.-data-and-citations" class="level2">
+<h2 class="anchored" data-anchor-id="e6.-data-and-citations">E6. Data and citations</h2>
+<p><strong>FLUXNET site data citations</strong> (from the Block 4 citation file):</p>
+<ul>
+<li>DE-Hai: Knohl, A., Tiedemann, F., Klosterhalfen, A., Markwitz, C., Fellert, D., Herbst, M., Kolle, O., Kreilein, J., Kutsch, W., and Rebmann, C. (2026). Fluxnet Archive Product from Hainich, 2000–2025. FLUXNET. https://hdl.handle.net/11676/VsQ1NTQTcEO5zRyfZjrBtkQa</li>
+<li>RU-Fyo: Varlagin, A. (2026). Fluxnet Archive Product from Fyodorovskoye, 1998–2025. FLUXNET. https://hdl.handle.net/11676/WDPOlLyjxJ7H43yO9QgAoOfj</li>
+<li>US-UiD: Bernacchi, C., Blakely, B., Moore, C., and Pederson, T. (2026). AmeriFlux FLUXNET-1F US-UiD University of Illinois Restored Native Prairie, Ver. v1.3_r1 (2008–2024). https://doi.org/10.17190/AMF/3027339</li>
+<li>FR-Gri: Buysse, P., Loubet, B., Depuydt, J., Durand, B., Gueudet, J.-C., and Kalalian, J. (2026). Fluxnet Archive Product from Grignon, 2004-01-01–2026-09-06. FLUXNET. https://hdl.handle.net/11676/XSI0ETkKyVVydpJuL7ro3_rQ</li>
+<li>CN-Sdq: Liu, S., Che, T., and Xu, Z. (2026). Fluxnet Archive Product from Sidaoqiao, 2013–2024. FLUXNET. https://hdl.handle.net/11676/3lCvpR-G0sl29NE-OD2rgvf7</li>
+</ul>
+<p>Also cite Pastorello, G., Trotta, C., Canfora, E. et al.&nbsp;(2020). The FLUXNET2015 dataset and the ONEFlux processing pipeline for eddy covariance data. <em>Scientific Data</em> 7, 225. https://doi.org/10.1038/s41597-020-0534-3.</p>
+<p><strong>Required FLUXNET acknowledgement:</strong> “FLUXNET data products were produced and harmonized by eddy covariance regional networks and data processing centers, including AmeriFlux, ChinaFlux, European Fluxes Database, ICOS, JapanFlux, KoFlux, OzFlux, SAEON, and TERN. These products also include a modified version of ERA5 hourly data provided by the Copernicus Climate Change Service.” Funding for the AmeriFlux data service was provided by the U.S. Department of Energy Office of Science. ChinaFlux data are from the National ecosystem science data center (https://www.nesdc.org.cn).</p>
+<p>For ChinaFlux, also cite Yu et al.&nbsp;(2006), https://doi.org/10.1016/j.agrformet.2006.02.011.</p>
+<ul>
+<li>WorldClim: Fick, S.E. &amp; Hijmans, R.J. (2017). WorldClim 2: new 1-km spatial resolution climate surfaces for global land areas. <em>International Journal of Climatology</em>, 37, 4302–4315. doi:10.1002/joc.5086.</li>
+<li>PlantTraits: Lusk, D. et al.&nbsp;(2026). <em>Nature Communications</em>, 17, 1203. doi:10.1038/s41467-026-68996-y. Data doi:10.5281/zenodo.14646322.</li>
+</ul>
+<p>The original FLUXNET download date was not recorded in the supplied archive metadata. WorldClim and PlantTraits were extracted on 2026-11-25. The first PlantTraits HTTP request returned 504; rerunning the supplied script succeeded. No download script changes were made. See the <a href="../assignments/block-5-complementary-data.md">assignment checklist</a> before hand-in.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
